@@ -38,7 +38,7 @@ $routes->get('/items/title/(:any)/(:any)', 'Items::title/$1/$2');
 $routes->get('/items/category/(:any)/(:any)', 'Items::category/$1/$2');
 $routes->get('/items/history/(:any)', 'Items::history/$1');
 $routes->get('/items/author/(:any)/(:any)', 'Items::author/$1/$2');
-$routes->get('/items/audio/(:any)/(:any)', 'Items::audio/$1/$2');
+$routes->get('/audio/items/(:any)/(:any)', 'Items::audio/$1/$2');
 /*
  * --------------------------------------------------------------------
  * Additional Routing
