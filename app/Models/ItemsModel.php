@@ -35,4 +35,20 @@ class ItemsModel extends Model
             ->where(['user_id' => $user_id])
             ->get()->getResultArray();
     }
+
+    public function getItemsByAuthor($author)
+    {
+        return
+            $this->join('category', 'items.category_id=category.category_id')
+            ->like(['items_authors' => $author])
+            ->get()->getResultArray();
+    }
+
+    public function getItemByID($items_id)
+    {
+        return
+            $this->join('category', 'items.category_id=category.category_id')
+            ->where(['items_id' => $items_id])
+            ->get()->getResultArray();
+    }
 }
